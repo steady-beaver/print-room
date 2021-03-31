@@ -19,7 +19,7 @@ const FailedOrder = () => {
                 try {
                     
                     // const response = await axios.post(`http://localhost:5001/printroom-11f4a/us-central1/backend/failed-order`, {
-                    const response = await axios.post(`https://us-central1-printroom-11f4a.cloudfunctions.net/backend/failed-order`, {
+                    const response = await axios.post("https://us-central1-printroom-11f4a.cloudfunctions.net/backend/failed-order", {
                         sessionID,
                     })
                     console.log(response.data)
