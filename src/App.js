@@ -15,6 +15,7 @@ import {ShoppingBagProvider} from './Contexts/ShoppingBagContext'
 import SuccessfulOrder from './Components/PurchaseResponse/SuccessfulOrder'
 import FailedOrder from './Components/PurchaseResponse/FailedOrder'
 import Home from './Components/Home/Home'
+import ErrorPage404 from './Components/ErrorPage404/ErrorPage404'
 
 const App = () => {
 
@@ -36,9 +37,10 @@ const App = () => {
                 <PrivateRoute path="/search" component={Search} />
                 <PrivateRoute path="/upload" component={Upload} />
                 <PrivateRoute path="/shopping" component={Shopping} />
-                <PrivateRoute path="/successful-order" component={SuccessfulOrder} />
                 <PrivateRoute path="/failed-order" component={FailedOrder} />
-              </Switch>
+                <PrivateRoute path="/successful-order" component={SuccessfulOrder} />
+                <Route path="*" component={ErrorPage404} />
+             </Switch>
             </div>
           </Router>
         </ShoppingBagProvider>
