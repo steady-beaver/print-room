@@ -9,8 +9,8 @@ const ErrorPage404 = () => {
 
     return (
         <div className="404-error-message" style={style}>
-            <h1>Transaction failed.</h1>
-            <h4>You are not charged.</h4>
+            <h1>Page not found</h1>
+            <h4>Not such resource</h4>
         </div>
     )
 }
