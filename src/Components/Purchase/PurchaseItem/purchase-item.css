@@ -1,0 +1,59 @@
+.purchase-item {
+    border: 3px solid var(--red-theme);
+    border-radius: 5px;
+    margin: 0 10px 10px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-item > .image-container {
+    line-height: 0;
+    margin-right: 10px;
+}
+
+.purchase-item > .item-details{
+    text-align: right;
+    position: relative;
+    overflow:hidden;
+
+}
+.purchase-item > .item-details > .movie-title{
+    overflow:hidden;
+    white-space: nowrap; 
+    text-overflow:ellipsis;
+}
+
+.purchase-item > .item-details > .movie-qty {
+    overflow:hidden;
+    white-space: nowrap; 
+    text-overflow:ellipsis;
+}
+
+.purchase-item > .item-details > .movie-qty:hover{
+    cursor: pointer;
+}
+
+.purchase-item > .item-details  .bucket-icon{
+    height: 22px;
+    margin: 5px 0 0 auto;
+    display: block;
+
+}
+
+.purchase-item > .item-details  .bucket-icon:hover{
+    
+    cursor: pointer;
+    background-color: var(--red-theme);
+
+}
+
+@media (max-width: 1024px) {
+
+
+
+
+
+}
+

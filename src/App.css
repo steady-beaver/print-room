@@ -1,0 +1,208 @@
+@import "./Components/Header/Header.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*
+
+  @media (max-width: 1024px) {}
+  @media (max-width: 768px) {}
+  @media (max-width: 640px) {}
+
+*/
+
+/* Variables */
+
+:root {
+  --red-theme: #b67873;
+  --red-darker: #b16561;
+  --text-red: #940b01;
+  --blue-theme: #154c9f;
+  --blue-hover: #2a61b4;
+
+  --whitish-theme: #f9f0f0;
+  --whitish-hover: rgba(255, 255, 255, 0.15);
+
+  --lr-space-generall: calc(100vw / 12);
+  --top-menu-h: calc(100vh / 6);
+  --min-app-w: 400px;
+}
+
+/* Reseting styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  max-width: 1920px;
+  min-width: var(--min-app-w);
+  margin: 0 auto;
+  height: 100vh;
+  min-height: 700px;
+  background-color: var(--red-theme);
+
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  body{
+    /* overflow-y: hidden; */
+  }
+
+  .circle-shape-bg{
+    background-image: url(./Components/Purchase/circle-solid-bg.png);
+      background-repeat: no-repeat;
+      background-position:  55vw center;
+  }
+  
+}
+
+label {
+  color: var(--whitish-theme);
+}
+
+input {
+  appearance: none;
+  border: 3px solid var(--blue-theme);
+  background: transparent;
+  margin-bottom: 5%;
+  padding: 5px;
+  outline: none;
+
+  color: var(--blue-theme);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(3.375rem, 2.0893rem + 2.0089vw, 4.5rem);
+  font-weight: normal;
+}
+h4 {
+  font-size: clamp(1.6875rem, 1.0446rem + 1.0045vw, 2.25rem);
+  font-weight: normal;
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  h1 {
+    /* font-size: clamp(1.6875rem, 0.1985rem + 6.6176vw, 3.375rem); */
+    /* font-size: clamp(1.6875rem, -0.7005rem + 8.4906vw, 3.375rem); */
+    /* font-size: clamp(1.777rem, -0.4843rem + 8.0403vw, 3.375rem); */
+    font-size: clamp(2.25rem, 0.6580rem + 5.6604vw, 3.375rem);
+
+  }
+  h4 {
+    font-size: clamp(1rem, 0.3934rem + 2.6961vw, 1.6875rem);
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-theme);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.content-in-grid-10x10 {
+  /* if next line is applied qty-modal will be disturbed */
+  /* position: relative; */   
+
+  min-width: var(--min-app-w);
+  height: calc(100vh - var(--top-menu-h));
+  padding: 0 calc(100vw / 12);
+  min-height: 500px;
+
+  color: var(--text-red);
+  font-family: "Carter One", cursive;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+  /* border: 3px solid hotpink; */
+
+}
+
+.err-msg{
+  text-align: center;
+}
+
+
+.btn {
+  display: inline-block;
+  appearance: none;
+  font-family: "Carter One", cursive;
+  font-size: clamp(1rem, 0.3934rem + 2.6961vw, 1.6875rem);
+  box-shadow: none;
+  border: 3px solid transparent;
+
+  margin: 0 10px;
+  padding: 0 10px;
+  line-height: 1.3em;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+/* Blue pallette */
+
+.primary-blue-btn {
+  color: var(--whitish-theme);
+  background-color: var(--blue-theme);
+  border-color: var(--blue-theme);
+}
+
+.primary-blue-btn:hover {
+  background-color: var(--blue-hover);
+}
+
+.secondary-blue-btn {
+  color: var(--blue-theme);
+  background-color: transparent;
+  border-color: var(--blue-theme);
+}
+
+.secondary-blue-btn:hover {
+  background-color: var(--whitish-hover);
+}
+
+/* Red pallette */
+
+.primary-red-btn {
+  color: var(--whitish-theme);
+  background-color: var(--text-red);
+  border-color: var(--text-red);
+}
+
+.primary-red-btn:hover {
+  background-color: var(--red-darker);
+}
+
+.secondary-red-btn {
+  color: var(--text-red);
+  background-color: transparent;
+  border-color: var(--text-red);
+}
+
+.secondary-red-btn:hover {
+  background-color: var(--whitish-hover);
+}
+
+/* @media (max-width: 768px) {
+  button[type="submit"].btn.primary-blue-btn{
+    line-height: 1.5em;
+    width: 25vw;
+    min-width: 7ch;
+  }
+} */

@@ -1,0 +1,4 @@
+.purchase-response-message{
+    grid-column: 1 / -1;
+    grid-row: 4 / 6;
+}

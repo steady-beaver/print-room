@@ -1,0 +1,96 @@
+
+h1.authentication-styles {
+  grid-column: 1/7;
+  grid-row: 1/9;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+form.authentication-styles {
+  grid-column: 7/-1;
+  grid-row: 3 / 9;
+
+  border: 1px solid var(--red-darker);
+  border-radius: 50px;
+  background-color: var(--red-darker);
+  padding: 0 15%;
+  min-height: max-content;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form.authentication-styles label{
+    margin: 5px 0;
+}
+form.authentication-styles input{
+     margin-bottom: 20px;
+}
+
+form.authentication-styles button[type="submit"] {
+  align-self: center;
+  margin: 20px 0 15px;
+  width: calc(5ch + 20%);
+  min-width: max-content;
+  height: 1.8em;
+  min-height: 40px;
+  padding: 0 5%;
+}
+
+form.authentication-styles .auth-link{
+  color: var(--blue-theme);
+  align-self: center;
+  font-size: 16px;
+}
+
+form.authentication-styles .forgot-password-link:hover{
+  	color: var(--blue-hover)
+}
+
+form.authentication-styles .success-msg{
+  color: var(--blue-theme)
+}
+
+@media (max-width: 1024px) {
+  h1.authentication-styles {
+    grid-column: 1 / -1;
+    grid-row: 2 / 4;
+
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  form.authentication-styles {
+    grid-column: 3 / 9;
+    grid-row: 5 / 10;
+
+    padding: 0 15%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  h1.authentication-styles {
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    justify-content: center;
+    text-align: center;
+  }
+
+  form.authentication-styles {
+    grid-column: 2 / 10;
+    grid-row: 4 / 9;
+
+  }
+
+}
+
+@media (max-width: 640px) {
+  form.authentication-styles .auth-link{
+    font-size: 14px;
+  }
+}

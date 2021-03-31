@@ -1,0 +1,29 @@
+.movieSuggestion{
+   
+    background-color: var(--red-darker);
+    border-radius: 5px;
+    padding: 10px 10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.movieSuggestion.selectable{
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.movieSuggestion.unselectable{
+    cursor: not-allowed;
+}
+
+.movieSuggestion.unselectable .no-poster{
+    width: min-content;
+}
+
+.movieSuggestion.selectable:hover{
+    background-color: var(--red-theme);
+}
+
+.movieSuggestion>.info{
+    text-align: right;
+}

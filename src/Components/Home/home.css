@@ -1,0 +1,57 @@
+.home-panel{
+    position: absolute;
+    width: 100%;
+    left: 0;   /* this line must be here and i dont know why  */
+}
+
+.home-panel > .merit{
+    width: calc(100vw - calc(var(--lr-space-generall) * 2));
+    margin: 10vh auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.home-panel > .merit > .message {
+    width: 57%;
+}
+
+
+.home-panel > .merit > .img-frame {
+    width: 40%;
+    max-height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+.home-panel > .merit > .img-frame > img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+}
+
+@media (max-width: 1024px) {
+    .home-panel > .merit{
+        flex-direction:column;
+    }
+
+    .home-panel > .merit > .message {
+        width: 100%;
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-panel > .merit > .img-frame {
+        width: 80%;
+    }
+}
+
+
