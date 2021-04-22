@@ -28,7 +28,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "jsx-a11y/alt-text": 0 
+    }
   },
   "browserslist": {
     "production": [

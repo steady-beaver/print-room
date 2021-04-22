@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./authentication-styles.css";
-import { useAuth } from '../../AuthContext'
+import { useAuth } from '../../Contexts/AuthContext'
 
 const Profile = () => {
 

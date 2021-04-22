@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useAuth } from "../../AuthContext";
+import { useAuth } from "../../Contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import "./authentication-styles.css";
 

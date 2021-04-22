@@ -23,12 +23,12 @@
   --whitish-theme: #f9f0f0;
   --whitish-hover: rgba(255, 255, 255, 0.15);
 
-  --lr-space-generall: calc(100vw / 12);
+  --lr-space-general: calc(100vw / 12);
   --top-menu-h: calc(100vh / 6);
   --min-app-w: 400px;
 }
 
-/* Reseting styles */
+/* Resetting styles */
 
 * {
   box-sizing: border-box;
@@ -48,18 +48,6 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 1024px) {
-  body{
-    /* overflow-y: hidden; */
-  }
-
-  .circle-shape-bg{
-    background-image: url(./Components/Purchase/circle-solid-bg.png);
-      background-repeat: no-repeat;
-      background-position:  55vw center;
-  }
-  
-}
 
 label {
   color: var(--whitish-theme);

@@ -7,7 +7,7 @@ import "simplebar/dist/simplebar.min.css";
 import axios from 'axios'
 import { loadStripe } from '@stripe/stripe-js';
 import QuantityAdjustModal from './QuantityAdjustModal/QuantityAdjustModal'
-import { useAuth } from "../../AuthContext";
+import { useAuth } from "../../Contexts/AuthContext";
 
 
 

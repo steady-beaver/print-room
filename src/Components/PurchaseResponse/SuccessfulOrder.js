@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './purchase-response.css'
 import { useLocation } from 'react-router-dom';
-import { useAuth } from '../../AuthContext'
+import { useAuth } from '../../Contexts/AuthContext'
 import axios from 'axios'
 
 const SuccessfulOrder = () => {
@@ -9,34 +9,38 @@ const SuccessfulOrder = () => {
     const location = useLocation()
 
     const { currentUser } = useAuth();
-    
 
-    useEffect(async () => {
-        const urlParams = new URLSearchParams(location.search)
-        const sessionID = urlParams.get("id")
-        console.log(sessionID)
 
-        if (sessionID) {
+    useEffect(
+        () => {
+            const updateOrderCollectionOnSuccess = async () => {
+                const urlParams = new URLSearchParams(location.search)
+                const sessionID = urlParams.get("id")
+                console.log(sessionID)
 
-            try {
+                if (sessionID) {
 
-                const token = await currentUser.getIdToken()
+                    try {
 
-                // const response = await axios.post(`http://localhost:5001/printroom-11f4a/us-central1/backend/successful-order`, {
-                const response = await axios.post(`https://us-central1-printroom-11f4a.cloudfunctions.net/backend/successful-order`, {
-                    sessionID,
-                    firebaseUserToken: token
-                })
+                        const token = await currentUser.getIdToken()
 
-                console.log(response.data)
+                        // const response = await axios.post(`http://localhost:5001/printroom-11f4a/us-central1/backend/successful-order`, {
+                        const response = await axios.post(`https://us-central1-printroom-11f4a.cloudfunctions.net/backend/successful-order`, {
+                            sessionID,
+                            firebaseUserToken: token
+                        })
 
-            } catch (err) {
-                console.log(err)
+                        console.log(response.data)
+
+                    } catch (err) {
+                        console.log(err)
+                    }
+                }
             }
-        }
 
-  
-    }, [location])
+            updateOrderCollectionOnSuccess()
+
+        }, [currentUser, location])
 
     return (
         <div className="purchase-response-message">

@@ -9,7 +9,7 @@ import Upload from "./Components/Upload/Upload"
 import Shopping from "./Components/Purchase/Shopping"
 import ForgotPassword from "./Components/Authentication/ForgotPassword"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { AuthProvider } from "./AuthContext";
+import { AuthProvider } from "./Contexts/AuthContext";
 import PrivateRoute from "./PrivateRoute"
 import {ShoppingBagProvider} from './Contexts/ShoppingBagContext'
 import SuccessfulOrder from './Components/PurchaseResponse/SuccessfulOrder'

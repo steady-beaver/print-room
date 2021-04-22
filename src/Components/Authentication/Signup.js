@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import {  useHistory } from "react-router-dom";
-import { useAuth } from "../../AuthContext";
+import { useAuth } from "../../Contexts/AuthContext";
 import "./authentication-styles.css";
 import axios from 'axios'
 
@@ -30,7 +30,7 @@ const Signup = () => {
       const token = await newUserCred.user.getIdToken()
 
       // const customerObjStripe = await axios.post("http://localhost:5001/printroom-11f4a/us-central1/backend/create-user", {
-      const customerObjStripe = await axios.post("https://us-central1-printroom-11f4a.cloudfunctions.net/backend/create-user", {
+      await axios.post("https://us-central1-printroom-11f4a.cloudfunctions.net/backend/create-user", {
         firebaseToken: token
       })
       

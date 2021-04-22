@@ -1,8 +1,9 @@
+/* eslint jsx-a11y/anchor-is-valid: 0 */ 
+
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useHistory  } from "react-router-dom";
-import { useAuth } from "../../AuthContext";
+import { useAuth } from "../../Contexts/AuthContext";
 import { useShoppingBag } from "../../Contexts/ShoppingBagContext"
-
 
 
 const Header = () => {
@@ -12,7 +13,6 @@ const Header = () => {
 
   const history = useHistory();
   const { currentUser, logout } = useAuth();
-
   const { shoppingList } = useShoppingBag();
 
 
@@ -114,7 +114,7 @@ const Header = () => {
 
   let menu
 
-  const choosMenu = (user) => {
+  const chooseMenu = (user) => {
     if (user == null) {
       return unauthMenu
     }
@@ -130,7 +130,7 @@ const Header = () => {
     }
   }
 
-  menu = choosMenu(currentUser);
+  menu = chooseMenu(currentUser);
 
   // ==================================================================
 
@@ -138,7 +138,6 @@ const Header = () => {
   // and set isMobileMenuOpened to false
 
   useEffect(() => {
-    menu = unauthMenu;
 
     const fromMobileToTablet = () => {
       if (window.innerWidth > 640) {

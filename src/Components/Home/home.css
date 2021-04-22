@@ -5,7 +5,7 @@
 }
 
 .home-panel > .merit{
-    width: calc(100vw - calc(var(--lr-space-generall) * 2));
+    width: calc(100vw - calc(var(--lr-space-general) * 2));
     margin: 10vh auto;
 
     display: flex;
