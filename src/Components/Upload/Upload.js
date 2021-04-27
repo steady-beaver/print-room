@@ -22,7 +22,6 @@ const Upload = () => {
 
     const { firebaseUpload } = useStorage()
 
-    const formRef = useRef(null)
     const inputNameRef = useRef(null)
     const inputQtyRef = useRef(null)
 
@@ -254,7 +253,7 @@ const Upload = () => {
             </div>
 
             <div className="upload-styles dynamic-area ">
-                <form className={file ? "chosenFile" : "noFile"} onSubmit={(e) => e.preventDefault()} ref={formRef} autoComplete="off">
+                <form className={file ? "chosenFile" : "noFile"} onSubmit={(e) => e.preventDefault()}  autoComplete="off">
                     <label htmlFor="file-input">
                         <span>File</span>
                         <span className="btn secondary-blue-btn poster-file-name">{file && file.name}</span>
